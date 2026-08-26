@@ -20,7 +20,7 @@
 
 很多职业建议只有两个答案："坚持"或"辞职"。职业军师不会只凭一句话替你下结论：它先接住情绪，再把事实、选项和风险拆开；既看兴趣，也看现实条件、机会成本和长期选择权，最后给出可以真正执行的下一步。
 
-它不只是一个话术库。它能帮你做技能盘点、行业调研、薪资谈判策略、转行路径设计；也能把分析落到一份可投递的简历、一次可演练的面试、一张可执行的学习计划表。它是一套覆盖职业全周期、面向多元发展路径、能够解释建议理由的 Codex Skill。
+它不只是一个话术库。它能帮你做技能盘点、行业调研、薪资谈判策略、转行路径设计；也能把分析落到一份可投递的简历、一次可演练的面试、一张可执行的学习计划表。它是一套覆盖职业全周期、面向多元发展路径、能够解释建议理由的 **Codex Skill**，兼容 TRAE、WorkBuddy 及所有支持 Codex 标准的 AI 助手。
 
 ---
 
@@ -139,6 +139,19 @@
 
 ---
 
+## 支持平台
+
+本项目是标准的 **Codex Skill**，所有支持 Codex Skill 标准的 AI 助手都可以使用。
+
+| 平台 | 状态 | 安装方式 |
+|------|------|---------|
+| **TRAE**（国内版） | ✅ 完全支持 | `/github NoCode-Spider/career-compass` |
+| **WorkBuddy**（海外版） | ✅ 完全支持 | `/github NoCode-Spider/career-compass` |
+| **Codex 标准平台** | ✅ 兼容 | 放入 skills 目录即可 |
+| OpenAI GPT（GPTs/Actions） | ⚠️ 需配置 | 参考 `agents/openai.yaml` |
+
+> TRAE 和 WorkBuddy 是同一款产品的不同版本（国内/海外），都支持 Codex Skill 标准。
+
 ## 安装使用
 
 ### 方式一：通过 TRAE / WorkBuddy 安装（推荐）
@@ -153,11 +166,14 @@
 
 ### 方式二：本地安装
 
-将项目放入 workspace 的 `.trae/skills/` 目录下：
+将项目放入 AI 助手 workspace 的 skills 目录下：
 
 ```bash
-# Windows (目录链接方式，文件本体可在任意位置)
+# TRAE / WorkBuddy - Windows (目录链接方式，文件本体可在任意位置)
 mklink /J "C:\path\to\workspace\.trae\skills\career-compass" "D:\projects\career-compass"
+
+# 其他 Codex 平台
+# 将整个项目目录放入对应的 skills 文件夹即可
 ```
 
 ---
