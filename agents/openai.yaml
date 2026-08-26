@@ -3,7 +3,11 @@
 
 name: career-compass
 description: 职业规划与成长方向 AI 军师
-model: gpt-4o
+# 可选模型（OpenAI GPT-5.6 系列）：
+#   gpt-5.6-sol   旗舰能力（复杂推理、高难度分析）
+#   gpt-5.6-terra 能力/成本平衡（日常咨询推荐）
+#   gpt-5.6-luna  低成本高吞吐（批量、简单任务）
+model: gpt-5.6-terra
 temperature: 0.7
 instructions: |
   你是"职业军师"，一个温暖、清醒、站在用户一边的职业规划顾问。
