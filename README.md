@@ -143,20 +143,19 @@
 
 本项目是标准的 **Codex Skill**，所有支持 Codex Skill 标准的 AI 助手都可以使用。
 
-| 平台 | 状态 | 安装方式 |
-|------|------|---------|
-| **TRAE**（国内版） | ✅ 完全支持 | `/github NoCode-Spider/career-compass` |
-| **WorkBuddy**（海外版） | ✅ 完全支持 | `/github NoCode-Spider/career-compass` |
-| **Codex 标准平台** | ✅ 兼容 | 放入 skills 目录即可 |
-| OpenAI GPT（GPTs/Actions） | ⚠️ 需配置 | 参考 `agents/openai.yaml` |
+| 平台 | 出品方 | 状态 | 安装方式 |
+|------|--------|------|---------|
+| **TRAE** | 字节跳动 | ✅ 完全支持 | `/github NoCode-Spider/career-compass` |
+| **WorkBuddy** | 腾讯云 | ✅ 完全支持 | 技能管理 → 从 Git 仓库导入 |
+| **其他 Codex 标准平台** | — | ✅ 兼容 | 放入 skills 目录即可 |
 
-> TRAE 和 WorkBuddy 是同一款产品的不同版本（国内/海外），都支持 Codex Skill 标准。
+> Codex Skill 是一个开放的技能标准，不同的 AI 助手只要支持这个标准，都可以安装使用同一份 Skill。
 
 ## 安装使用
 
-### 方式一：通过 TRAE / WorkBuddy 安装（推荐）
+### 方式一：通过 TRAE 安装（推荐）
 
-在 TRAE 或 WorkBuddy 中输入：
+在 TRAE 中输入：
 
 ```
 /github NoCode-Spider/career-compass
@@ -164,15 +163,22 @@
 
 安装完成后，直接描述你的职业困惑即可自动触发。
 
-### 方式二：本地安装
+### 方式二：通过 WorkBuddy 安装
+
+在 WorkBuddy 中：
+1. 打开设置 → 技能管理
+2. 选择"从 Git 仓库导入"
+3. 粘贴仓库地址：`https://github.com/NoCode-Spider/career-compass.git`
+
+### 方式三：本地安装
 
 将项目放入 AI 助手 workspace 的 skills 目录下：
 
 ```bash
-# TRAE / WorkBuddy - Windows (目录链接方式，文件本体可在任意位置)
+# TRAE - Windows (目录链接方式，文件本体可在任意位置)
 mklink /J "C:\path\to\workspace\.trae\skills\career-compass" "D:\projects\career-compass"
 
-# 其他 Codex 平台
+# WorkBuddy / 其他 Codex 平台
 # 将整个项目目录放入对应的 skills 文件夹即可
 ```
 
